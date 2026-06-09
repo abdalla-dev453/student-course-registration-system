@@ -2,7 +2,7 @@ from services.school_system import SchoolSystem
 
 system = SchoolSystem()
 
-# Add students
+# Students
 system.add_student(
     "S001",
     "Mary Wanjiku",
@@ -17,19 +17,43 @@ system.add_student(
     "0722222222"
 )
 
-# View students
-system.view_students()
+system.add_student(
+    "S003",
+    "James Otieno",
+    "james@example.com",
+    "0733333333"
+)
 
-# Search student
-system.search_student("Mary")
-
-# Add course
+# Course
 system.add_course(
     "PY101",
     "Python Fundamentals",
     "Mr. Joseph",
-    5
+    2
 )
 
-# View courses
-system.view_courses()
+# Registrations
+system.register_student_to_course(
+    "S001",
+    "PY101"
+)
+
+system.register_student_to_course(
+    "S001",
+    "PY101"
+)
+
+system.register_student_to_course(
+    "S002",
+    "PY101"
+)
+
+system.register_student_to_course(
+    "S003",
+    "PY101"
+)
+
+# Views
+system.view_students_in_course("PY101")
+
+system.view_courses_for_student("S001")
