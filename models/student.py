@@ -1,5 +1,4 @@
 from models.person import Person
-import json
 
 
 class Student(Person):
