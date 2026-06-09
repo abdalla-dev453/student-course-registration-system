@@ -10,4 +10,3 @@ class Person:
             f"Phone Number: {self.phone_number}\n"
         )
     
-    

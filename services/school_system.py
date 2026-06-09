@@ -128,3 +128,95 @@ class SchoolSystem:
         for course in self.courses.values():
             print(course)
             print("-" * 40)
+
+
+# ========================== REGISTRATIONS MANAGEMENT =====================
+def register_student_to_course(self, student_id, course_id):
+    """Validations"""
+    # condition to check if student exists
+    if student_id not in self.students:
+        print("Student not found.")
+        return
+
+    # Condition to check if course exists
+    if course_id not in self.courses:
+        print("Course not found.")
+        return
+
+    # Checking for registration list
+    if course_id not in self.registrations:
+        self.registrations[course_id] = []
+
+    # Already registered?
+    if student_id in self.registrations[course_id]:
+        student = self.students[student_id]
+
+        print(
+            f"{student.name} is already registered for this course."
+        )
+        return
+
+    # Capacity check
+    course = self.courses[course_id]
+
+    if len(self.registrations[course_id]) >= course.capacity:
+        print(
+            "Registration failed. This course is already full."
+        )
+        return
+
+    # Register
+    self.registrations[course_id].append(student_id)
+
+    student = self.students[student_id]
+
+    print(
+        f"{student.name} successfully registered for "
+        f"{course.course_name}."
+    )
+
+
+# View registrations
+def view_students_in_course(self, course_id):
+
+    if course_id not in self.courses:
+        print("Course not found.")
+        return
+
+    course = self.courses[course_id]
+
+    print(f"Students in {course.course_name}:")
+
+    students = self.registrations.get(course_id, [])
+
+    if not students:
+        print("No students registered for this course.")
+        return
+    
+    for student_id in students:
+        print(self.students[student_id])
+        print("-" * 40)
+
+# view course
+def view_courses_for_student(self, student_id):
+
+    if student_id not in self.studens:
+        print("Student not found.")
+        return
+
+    student = self.students[student_id]
+
+    print(f"Courses for {student.name}:")
+    
+    found = False
+
+    for course_id, student_id in self.registrations.items:
+        if student_id == student_id:
+            course = self.courses[course_id]
+            print(course)
+            print("-" * 40)
+
+            found = True
+
+    if not found:
+        print("No courses found for this student.")
