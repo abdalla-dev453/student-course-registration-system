@@ -1,0 +1,26 @@
+[
+    {
+        "course_id": "PY101",
+        "course_name": "Python Fundamentals",
+        "trainer_name": "Mr. Joseph",
+        "capacity": 2
+    },
+    {
+        "course_id": "JS101",
+        "course_name": "JavaScript Fundamentals",
+        "trainer_name": "Mr. John",
+        "capacity": 3
+    },
+    {
+        "course_id": "HTML101",
+        "course_name": "HTML Fundamentals",
+        "trainer_name": "Ms. Jane",
+        "capacity": 2
+    },
+    {
+        "course_id": "CSS101",
+        "course_name": "CSS Fundamentals",
+        "trainer_name": "Ms. Mary",
+        "capacity": 2
+    }
+]
