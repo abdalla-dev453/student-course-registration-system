@@ -1,0 +1,26 @@
+[
+    {
+        "student_id": "S001",
+        "name": "Mary Wanjiku",
+        "email": "mary@example.com",
+        "phone_number": "0711111111"
+    },
+    {
+        "student_id": "S002",
+        "name": "John Mwangi",
+        "email": "john@example.com",
+        "phone_number": "0722222222"
+    },
+    {
+        "student_id": "S003",
+        "name": "James Otieno",
+        "email": "james@example.com",
+        "phone_number": "0733333333"
+    },
+    {
+        "student_id": "S004",
+        "name": "Jane Mwangi",
+        "email": "jane@example.com",
+        "phone_number": "0744444444"
+    }
+]

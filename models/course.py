@@ -1,4 +1,3 @@
-import json
 
 class Course:
     def __init__(self, course_id, course_name, trainer_name, capacity):
